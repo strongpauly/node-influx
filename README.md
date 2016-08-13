@@ -123,7 +123,7 @@ client.setFailoverTimeout( value )
 Returns an array of available hosts.
 
 ```js
-getHostsAvailable( )
+client.getHostsAvailable( )
 ```
 
 ##### getHostsDisabled
@@ -152,7 +152,7 @@ client.getDatabaseNames( function(err,arrayDatabaseNames){ } )
 Drops a database inluding all measurements/series - requires cluster admin privileges
 
 ```js
-dropDatabase ( databaseName, function(err,response) { })
+client.dropDatabase ( databaseName, function(err,response) { })
 ```
 
 
@@ -168,7 +168,7 @@ client.getMeasurements(function(err,arrayMeasurements){ } )
 Drops a measurement from a database - requires database admin privileges
 
 ```js
-dropSeries ( measurementName, function(err,response) { })
+client.dropSeries ( measurementName, function(err,response) { })
 ```
 
 
@@ -191,7 +191,7 @@ client.getSeriesNames([measurementName], function(err,arraySeriesNames){} ) { }
 Drops a series from a database - requires database admin privileges
 
 ```js
-dropSeries ( seriesId, function(err,response) { })
+client.dropSeries ( seriesId, function(err,response) { })
 ```
 
 
@@ -397,14 +397,14 @@ client.createContinuousQuery('testQuery', 'SELECT COUNT(value) INTO valuesCount_
 Fetches all continuous queries from a database - requires database admin privileges
 
 ```js
-getContinuousQueries( function(err,arrayContinuousQueries) { })
+client.getContinuousQueries( function(err,arrayContinuousQueries) { })
 ```
 
 ##### dropContinuousQuery
 Drops a continuous query from a database - requires database admin privileges
 
 ```js
-dropContinuousQuery( queryName, [databaseName], callback) { }
+client.dropContinuousQuery( queryName, [databaseName], callback) { }
 ```
 
 
